@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	background: #f1e8c2;
+}
+
+.images {
+	display: grid;
+	grid:auto-flow 200px /repeat(2, 200px);
+}
+
+.images img {
+	width: 100%;
+	aspect-ratio: 1;
+	cursor: pointer;
+	z-index: 0;
+	transition: .6s;
+	cursor: pointer;
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%);
+}
+
+.images img:hover {
+	width: 200%;
+	z-index: 1;
+	transition: .6s;
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
+}
+
+.images img:nth-child(1) {
+	place-self: start;
+	border-right: 2px solid #F2F3F4;
+}
+
+.images img:nth-child(2) {
+	place-self: start end;
+	border-left: 2px solid #F2F3F4;
+}
+
+.images img:nth-child(3) {
+	place-self: end start;
+	border-top: 2px solid #F2F3F4;
+}
+
+.images img:nth-child(4) {
+	place-self: end;
+	border-left: 2px solid #F2F3F4;
+	border-top: 2px solid #F2F3F4;
+}
+
+.images img:nth-child(1):hover {
+	border: none;
+}
+.images img:nth-child(1):hover body{
+	background-color: #fff;
+}
+
+.images img:nth-child(2):hover {
+	border: none;
+}
+
+.images img:nth-child(3):hover {
+	border: none;
+}
+
+.images img:nth-child(4):hover {
+	border: none;
+}
